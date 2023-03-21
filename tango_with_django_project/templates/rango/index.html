@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+
+<html>
+
+
+    <head>
+        <title>News</title>
+    </head>
+
+
+
+    <body>
+
+        <style>
+        body {
+            background-color: yellow;
+        }
+
+        p1 {
+            font-style: italic;
+        }
+
+</style>
+
+        <h1><center>School News</center></h1>
+
+        <div>
+            <h2>Weather Warning</h2>
+        </div>
+
+        <div>
+        <p1>by Allen White, 20/03/2023</p1>
+        </div>
+
+        <div>
+            <br />
+
+            {{ newsmessage1 }}
+        </div>
+
+            <br />
+
+        <div>
+
+            <h2>Back to in-person teaching</h2>
+
+            <p1>by David Black, 01/02/2023</p1>
+            <div>
+               <br />
+
+            This year, we will all go back to in-person teaching.
+            </div>
+        </div>
+
+
+        </div>
+
+        <div>
+        {% if categories %}
+            <ul>
+            {% for category in categories %}
+                <li>{{ category.name }}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <br />
+            <br />
+            there is no new news
+        {% endif %}
+        </div>
+
+    </body>
+
+
+</html>
